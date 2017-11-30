@@ -74,3 +74,23 @@ def action
   render 'baz'
 end
 ```
+
+### Scopes
+
+AR query methods can be written either as class methods or using the `scope` macro.  E.g.
+
+```ruby
+def self.some_scope(param)
+  if param.present?
+    where(param: param)
+  else
+    self.all
+  end
+end
+```
+
+```ruby
+scope :some_scope, ->(param) { where(param: param) if param }
+```
+
+Either form is acceptable, but we'll prefer using scopes because they handle nil checks more gracefully (as demonstrated above), and because that's the direction the community's headed.
