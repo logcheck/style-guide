@@ -94,3 +94,9 @@ scope :some_scope, ->(param) { where(param: param) if param }
 ```
 
 Either form is acceptable, but we'll prefer using scopes because they handle nil checks more gracefully (as demonstrated above), and because that's the direction the community's headed.
+
+### Abstract Classes
+
+Prefer duck typing to abstract classes. Abstract classes are required in staticaly typed languages to call methods (send messages to) on classes that inherit from the abstract class. They are not required in Ruby because you can send any message to any object at any time.
+
+See discussion on [this Stack Overflow question](https://stackoverflow.com/questions/512466/how-to-implement-an-abstract-class-in-ruby).
