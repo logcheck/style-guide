@@ -39,5 +39,5 @@ be empty. Files should end with a single `\n`.
 Superfluous invisible characters make for noisy diffs.
 
 ## Language-specific Guides
-- [Ruby]('ruby.md')
-- [React]('react.md')
+- [Ruby](ruby.md)
+- [React](react.md)
