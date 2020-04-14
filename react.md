@@ -1,26 +1,4 @@
-React
------
+Sylistic conventions in our React code are enforced by eslint.
 
-Use the spread operator to pass in props from Ruby
-==================================================
-
-```erb
-<%= content_tag :div, nil,
-  id: 'some-component',
-  data: {
-    initialValueForComponent: 1
-  }.to_json
-%>
-```
-```jsx
-const element = document.getElementById('some-component')
-if (element) {
-  const data = JSON.parse(element.getAttribute('data'))
-  ReactDOM.render(<SomeComponent {...data} />, element)
-}
-```
-
-Prefer functional components over classes
-=======================================
-
-Further reading: https://reactjs.org/docs/hooks-intro.html
+For more info on linting and other topics, see
+[logcheck-web/app/javascript/README.md](https://github.com/logcheck/logcheck-web/blob/master/app/javascript/README.md).
